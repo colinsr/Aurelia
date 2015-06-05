@@ -1,33 +1,26 @@
 export class Notebox{
-	answerMessage = 'See answer';
-	questionMessage = 'See question again';
+	answerMessage = 'See answer.';
+	questionMessage = 'See question again.';
 
     notecards = [
-    	{ front: "Answer.", back: "Question?" },
-    	{ front: "Answer2.", back: "Question2?" },
-    	{ front: "Answer3.", back: "Question3?" }
+    	{ answer: "Answer1.", question: "Question1?" },
+    	{ answer: "Answer2.", question: "Question2?" },
+    	{ answer: "Answer3.", question: "Question3?" },
+    	{ answer: "Answer4.", question: "Question4?" }
     ];
-
-    notecard = this.notecards[0];
-    console.log(this.notecard);
   
-    cardIndex = 0;
-    cardCount = this.notecards.length;
+    cardIndex = 0;  //todo: this needs to increment if the show next is clicked
 
     showAnswer = false;
-    
+  
+    notecard = { answer: "Answer.", question: "Question?" };
+  
     flipCard = function(){
     	this.showAnswer ? this.showAnswer = false : this.showAnswer = true;
     }
   
     nextCard = function(){
-    	var me = this;
-    	var currentNotecard = me.notecard;
-
-    	if(me.cardIndex < me.cardCount){
-			me.cardIndex++;
-			me.notecard = me.notecards[me.cardIndex];
-			
-    	};
+    	this.cardIndex++; 
+    	this.notecard = this.notecards[this.cardIndex];
     }
 }
