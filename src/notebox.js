@@ -13,7 +13,7 @@ export class Notebox{
 
     showAnswer = false;
   
-    notecard = { answer: "Answer.", question: "Question?" };
+    notecard = this.notecards[this.cardIndex];
   
     flipCard = function(){
     	this.showAnswer ? this.showAnswer = false : this.showAnswer = true;
