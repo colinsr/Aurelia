@@ -17,10 +17,17 @@ export class Notebox{
   
     flipCard = function(){
     	this.showAnswer ? this.showAnswer = false : this.showAnswer = true;
-    }
+    };
   
     nextCard = function(){
-    	this.cardIndex++; 
-    	this.notecard = this.notecards[this.cardIndex];
-    }
+    	if (this.cardIndex < this.notecards.length - 1) {
+			this.cardIndex++; 
+    	}
+    	else
+    	{
+    		this.cardIndex = 0;
+    	}
+
+	    this.notecard = this.notecards[this.cardIndex];
+    };
 }
