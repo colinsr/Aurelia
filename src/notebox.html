@@ -1,9 +1,8 @@
 <template>
 	<!-- todo: need to display each "notecard" in the notecards array. -->
-	<div class="card-back"><!-- todo: add style with background color -->
-		<div value.two-way="showAnswer">${showAnswer}</div>
-		<div value.two-way="notecard">${notecard.answer}</div>
-		<div value.two-way="notecard">${notecard.question}</div>
+	<div class="card"><!-- todo: add style with background color -->
+		<div show.bind="showAnswer" value.two-way="notecard">${notecard.answer}</div>
+		<div show.bind="!showAnswer" value.two-way="notecard">${notecard.question}</div>
 	</div>
 
 	<div class="btn-group">
