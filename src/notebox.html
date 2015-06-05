@@ -1,0 +1,11 @@
+<template>
+	<!-- todo: need to display each "notecard" in the notecards array. -->
+	<div class="card-back"><!-- todo: add style with background color -->
+		<span value.bind="showAnswer">${showAnswer ? notecard.answer : notecard.question}</span>
+	</div>
+
+	<div class="btn-group">
+		<button class="btn btn-primary btn-xs" click.trigger="flipCard()">${showAnswer ? questionMessage : answerMessage}</button>
+		<button class="btn btn-info btn-xs" click.trigger="nextCard()">Next Card</button>
+	</div>
+</template>
