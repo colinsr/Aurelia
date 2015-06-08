@@ -11,7 +11,7 @@ export class Notebox{
     	{ answer: "Answer4.", question: "Question4?" }
     ];
   
-    cardIndex = 0;  //todo: this needs to increment if the show next is clicked
+    cardIndex = 0;
 
     showAnswer = false;
   
