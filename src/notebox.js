@@ -34,7 +34,6 @@ export class Notebox{
     };
 
     shuffleCards = function(){
-        debugger;
-        _(this.notecards).shuffle();
+        this.notecards = _(this.notecards).shuffle();
     };
 }
