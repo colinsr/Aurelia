@@ -1,11 +1,6 @@
-import { mytest } from './test';
-import { Notebox } from './notebox';
-
-export class States {
-  notebox = undefined;
-
-  constructor(){
-    this.notecards = new Notebox(mytest);
-  };
-
-}
+export var states = [
+  { answer: "Ohio.", question: "Columbus?" },
+  { answer: "Indiana.", question: "Indianapolis?" },
+  { answer: "Michigan.", question: "Lansing?" },
+  { answer: "Kentucky.", question: "Lexington?" }
+];

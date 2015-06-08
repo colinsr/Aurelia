@@ -2,7 +2,7 @@
   <h2 class="jumbotron">Click on a notebox from the list below:</h2>
   <ul class="list-inline">
     <li repeat.for="notebox of noteboxes">
-      <button class="btn btn-xs" click.trigger="$parent.navigateToNotebox(notebox.id)">${notebox.name}</button>
+      <button class="btn btn-xs" click.trigger="$parent.navigateToNotebox(notebox.cards)">${notebox.name}</button>
     </li>
   </ul>
 </template>
