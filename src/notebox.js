@@ -1,15 +1,14 @@
 import _ from 'underscore';
 
-export class Notebox{
+export class Notebox {
 	  answerMessage = 'See answer.';
 	  questionMessage = 'See question again.';
 
-    notecards = [
-    	{ answer: "Answer1.", question: "Question1?" },
-    	{ answer: "Answer2.", question: "Question2?" },
-    	{ answer: "Answer3.", question: "Question3?" },
-    	{ answer: "Answer4.", question: "Question4?" }
-    ];
+    constructor(notecards){
+      this.notecards = notecards;
+    }
+
+    notecards = [];
   
     cardIndex = 0;
 
