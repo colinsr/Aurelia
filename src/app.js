@@ -1,5 +1,6 @@
 import 'bootstrap';
 import 'bootstrap/css/bootstrap.css!';
+import underscore from 'underscore';
 
 export class App {
   configureRouter(config, router){

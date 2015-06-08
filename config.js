@@ -28,6 +28,7 @@ System.config({
     "core-js": "npm:core-js@0.9.13",
     "css": "github:systemjs/plugin-css@0.1.11",
     "font-awesome": "npm:font-awesome@4.3.0",
+    "underscore": "npm:underscore@1.8.3",
     "github:aurelia/animator-css@0.2.0": {
       "aurelia-templating": "github:aurelia/templating@0.11.2"
     },
