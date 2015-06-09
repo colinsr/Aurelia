@@ -1,14 +1,22 @@
+import { Router } from 'aurelia-router';
 import { states } from './states';
 
 export class Noteboxes {
+  static inject = [Router];
+
+  constructor(router) {
+    this.router = router;
+  }
+
   noteboxes = [
-    { name: 'States', cards: states },
-    { name: 'Numbered Questions', cards: states },
-    { name: 'Spelling Words', cards: states },
-    { name: 'Vocabulary Words', cards: states }
+    'States',
+    'Numbered Questions',
+    'Spelling Words',
+    'Vocabulary Words'
   ];
 
-  navigateToNotebox = function(clickedItem){
-    console.log('You clicked the item with id of ' + clickedItem);
+  navigateToNotebox = function(notebox){
+    var url = this.router.generate("Notebox", { name: notebox });
+    this.router.navigate(url);
   };
 }

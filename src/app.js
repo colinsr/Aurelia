@@ -7,8 +7,8 @@ export class App {
     config.map([
       //{ route: ['','welcome'],  moduleId: './welcome',      nav: true, title:'Welcome' },
       { route: ['', 'Noteboxes'],  moduleId: './noteboxes',      nav: true, title:'Noteboxes' },
-	    { route: 'Notebox',  moduleId: './notebox',      nav: true, title:'Notebox' },
-      { route: 'states',  moduleId: './states',      nav: true, title:'States' }
+	    { route: 'Notebox/:name',  moduleId: './notebox' },
+      { route: 'states',  moduleId: './states', nav: true, title:'States' }
     ]);
 
     this.router = router;

@@ -1,8 +1,15 @@
 import _ from 'underscore';
 
+
+
 export class Notebox {
 	  answerMessage = 'See answer.';
 	  questionMessage = 'See question again.';
+
+    activate(params, routeConfig, a) {
+      //inside class
+      debugger;
+    }
 
     constructor(notecards){
       this.notecards = notecards;
