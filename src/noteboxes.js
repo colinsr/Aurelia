@@ -1,5 +1,4 @@
 import { Router } from 'aurelia-router';
-import { states } from './states';
 
 export class Noteboxes {
   static inject = [Router];

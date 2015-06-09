@@ -1,5 +1,8 @@
 import _ from 'underscore';
-
+import { states } from './states';
+import { numberedQuestions } from './numberedQuestions';
+import { spellingWords } from './spellingWords';
+import { vocabularyWords } from './vocabularyWords';
 
 
 export class Notebox {
@@ -7,12 +10,15 @@ export class Notebox {
 	  questionMessage = 'See question again.';
 
     activate(params, routeConfig, a) {
-      //inside class
-      debugger;
-    }
+      let collection = { };
+      collection[states.name] = states.cards;
+      collection[numberedQuestions.name] = numberedQuestions.cards;
+      collection[spellingWords.name] = spellingWords.cards;
+      collection[vocabularyWords.name] = vocabularyWords.cards;
 
-    constructor(notecards){
-      this.notecards = notecards;
+      this.notecards = collection[params.name];
+      this.shuffleCards();
+      this.nextCard();
     }
 
     notecards = [];
@@ -21,7 +27,7 @@ export class Notebox {
 
     showAnswer = false;
   
-    notecard = this.notecards[this.cardIndex];
+    notecard = undefined;
   
     flipCard = function(){
     	this.showAnswer ? this.showAnswer = false : this.showAnswer = true;
