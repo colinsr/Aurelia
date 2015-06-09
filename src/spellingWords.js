@@ -1,5 +1,5 @@
 export var spellingWords = {
-    name: 'SpellingWords',
+    name: 'Spelling Words',
     cards: [
       { answer: "C A T", question: "The ___ 'sail'-ed off the balcony?" },
       { answer: "D O G", question: "The ___ shat on the floor?" },

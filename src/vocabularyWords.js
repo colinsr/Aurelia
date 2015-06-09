@@ -1,5 +1,5 @@
 export var vocabularyWords = {
-  name: 'VocabularyWords',
+  name: 'Vocabulary Words',
   cards: [
     {answer: "General Motors", question: "This car maker is the crappiest in detroit"},
     {answer: "Abhor", question: "Another word for hate or extreme dislike"},
